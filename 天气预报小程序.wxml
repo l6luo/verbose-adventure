@@ -1,0 +1,23 @@
+<!--pages/天气预报小程序/天气预报小程序.wxml-->
+<text>pages/天气预报小程序/天气预报小程序.wxml</text>
+<view class="container">
+  <view class="search-box">
+    <input placeholder="请输入城市名称" bindinput="inputCity"/>
+    <button bindtap="searchWeather" type="primary">查询天气</button>
+  </view>
+
+  <view class="weather-info" wx:if="{{weatherData}}">
+    <view class="city">{{weatherData.city}}</view>
+    <view class="temp">{{weatherData.temp}}°c</view>
+    <view class="weather">{{weatherData.weather}}</view>
+  </view>
+</view>
+
+<navigator ur1="/pages/about/about" class="about-link">关于我们</navigator>
+<view class="container">
+  <view class="about-content">
+    <text>这是一个简单的天气预报微信小程序</text>
+    <view>开发者：罗66</view>
+    <view>版本:0.0.1</view>
+  </view>
+</view>
